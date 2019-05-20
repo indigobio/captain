@@ -25,8 +25,8 @@ go get github.com/Azure/go-ansiterm/winterm
 ```bash
 export PATH=${PATH}:${GOPATH}/bin
 cd ~/dev/go/src/github.com/indigobio/captain
+rm -rf build
 make cross
-make cross # for some reason passes second time...
 ```
 
 Executables are now available under `~/dev/go/src/github.com/indigobio/build`
