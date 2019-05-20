@@ -1,6 +1,6 @@
 captain:
   build: Dockerfile
-  image: harbur/captain
+  image: indigobio/captain
   test:
-    - docker run -v /var/run/docker.sock:/var/run/docker.sock harbur/captain go test -v github.com/harbur/captain
+    - docker run -v /var/run/docker.sock:/var/run/docker.sock indigobio/captain go test -v github.com/indigobio/captain
 

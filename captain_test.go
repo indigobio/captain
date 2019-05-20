@@ -1,4 +1,4 @@
-package captain // import "github.com/harbur/captain"
+package captain // import "github.com/indigobio/captain"
 
 import (
 	"github.com/stretchr/testify/assert"
@@ -91,7 +91,7 @@ func TestSelfUpdate(t *testing.T) {
 }
 
 func TestDownloadFile(t *testing.T) {
-	res := downloadFile("/tmp/captain.html", "https://github.com/harbur/captain")
+	res := downloadFile("/tmp/captain.html", "https://github.com/indigobio/captain")
 	assert.Nil(t, res, "captain")
 }
 

@@ -25,7 +25,7 @@ function getDistributionTag {
 CAPTAIN_DIR=$HOME/.captain
 CAPTAIN_BIN_DIR=$CAPTAIN_DIR/bin
 CAPTAIN_BINARIES_DIR=$CAPTAIN_DIR/binaries
-CAPTAIN_CURRENT_VERSION_URL=$(curl -sS https://raw.githubusercontent.com/harbur/captain/master/VERSION)
+CAPTAIN_CURRENT_VERSION_URL=$(curl -sS https://raw.githubusercontent.com/indigobio/captain/master/VERSION)
 CAPTAIN_CURRENT_VERSION_PATH="${CAPTAIN_BINARIES_DIR}/captain-${CAPTAIN_CURRENT_VERSION_URL}"
 CAPTAIN_DISTRIBUTION=$(getDistributionTag)
 
@@ -34,7 +34,7 @@ echo "Creating folders in ${CAPTAIN_DIR}"
 mkdir -p $CAPTAIN_BIN_DIR $CAPTAIN_BINARIES_DIR
 
 echo "Start downloading Captain ${CAPTAIN_CURRENT_VERSION_URL}"
-curl -sSL https://github.com/harbur/captain/releases/download/${CAPTAIN_CURRENT_VERSION_URL}/${CAPTAIN_DISTRIBUTION} > ${CAPTAIN_CURRENT_VERSION_PATH}
+curl -sSL https://github.com/indigobio/captain/releases/download/${CAPTAIN_CURRENT_VERSION_URL}/${CAPTAIN_DISTRIBUTION} > ${CAPTAIN_CURRENT_VERSION_PATH}
 ln -snf ${CAPTAIN_CURRENT_VERSION_PATH} "${CAPTAIN_BIN_DIR}/captain"
 chmod +x "${CAPTAIN_BIN_DIR}/captain"
 

@@ -1,5 +1,37 @@
 [![Build Status](https://travis-ci.org/harbur/captain.svg?branch=master)](https://travis-ci.org/harbur/captain) [![Coverage Status](https://coveralls.io/repos/github/harbur/captain/badge.svg?branch=master)](https://coveralls.io/github/harbur/captain?branch=master)
 
+# To Build Project
+
+## One Time Setup
+
+```bash
+mkdir -p ~/dev/go/src/github.com/indigobio
+export GOPATH=/home/jwliechty/dev/go  # put in .bashrc
+cd ~/dev/go/src/github.com/indigobio
+git clone git@github.com:indigobio/captain.git
+cd captain
+go get
+go get github.com/mitchellh/gox
+go get github.com/spf13/cobra
+go get github.com/inconshreveable/mousetrap
+go get github.com/Microsoft/go-winio
+go get github.com/Azure/go-ansiterm/winterm
+```
+
+## Build Executables
+
+(taken from `release.sh` and `Makefile` 'cross' target)
+
+```bash
+export PATH=${PATH}:${GOPATH}/bin
+cd ~/dev/go/src/github.com/indigobio/captain
+make cross
+make cross # for some reason passes second time...
+```
+
+Executables are now available under `~/dev/go/src/github.com/indigobio/build`
+
+
 # Introduction
 
 Captain - Convert your Git workflow to Docker containers ready for Continuous Delivery
@@ -18,7 +50,7 @@ From the other side, you can now pull the feature branch you want to test, or cr
 
 To install Captain, run:
 ```
-curl -sSL https://raw.githubusercontent.com/harbur/captain/v1.1.3/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/indigobio/captain/v2.0.0/install.sh | bash
 ```
 
 You will need to add `~/.captain/bin` in your `PATH`. E.g. in your `.bashrc` or `.zshrc` add:

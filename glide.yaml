@@ -1,4 +1,4 @@
-package: github.com/harbur/captain
+package: github.com/indigobio/captain
 import:
 - package: github.com/fatih/color
 - package: github.com/fsouza/go-dockerclient
