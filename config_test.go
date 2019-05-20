@@ -1,4 +1,4 @@
-package captain // import "github.com/harbur/captain"
+package captain // import "github.com/indigobio/captain"
 
 import (
 	"github.com/stretchr/testify/assert"

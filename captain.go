@@ -1,4 +1,4 @@
-package captain // import "github.com/harbur/captain"
+package captain // import "github.com/indigobio/captain"
 
 import (
 	"fmt"
@@ -311,7 +311,7 @@ func SelfUpdate() {
 
 	info("Checking the last version of Captain...")
 	version := findLastVersion()
-	downloadUrl := fmt.Sprintf("https://github.com/harbur/captain/releases/download/%s/captain_%s_%s", version, kernel, arch)
+	downloadUrl := fmt.Sprintf("https://github.com/indigobio/captain/releases/download/%s/captain_%s_%s", version, kernel, arch)
 	downloadedVersionPath := filepath.FromSlash(binariesDir + "/captain-" + version)
 
 	if currentVersionPath == downloadedVersionPath {
@@ -354,7 +354,7 @@ func SelfUpdate() {
 }
 
 func findLastVersion() string {
-	url := "https://raw.githubusercontent.com/harbur/captain/master/VERSION"
+	url := "https://raw.githubusercontent.com/indigobio/captain/master/VERSION"
 
 	res, err := http.Get(url)
 

@@ -1,4 +1,4 @@
-package captain // import "github.com/harbur/captain"
+package captain // import "github.com/indigobio/captain"
 
 import (
 	"bytes"
@@ -95,7 +95,7 @@ func unmarshal(data []byte) *config {
 	var configV1 *configV1
 	res := yaml.Unmarshal(data, &configV1)
 	if len(configV1.Build.Images) > 0 {
-		err("Old %s format detected! Please check the https://github.com/harbur/captain how to upgrade", "captain.yml")
+		err("Old %s format detected! Please check the https://github.com/indigobio/captain how to upgrade", "captain.yml")
 		os.Exit(-1)
 	}
 
