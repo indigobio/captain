@@ -1,5 +1,8 @@
 [![Build Status](https://travis-ci.org/harbur/captain.svg?branch=master)](https://travis-ci.org/harbur/captain) [![Coverage Status](https://coveralls.io/repos/github/harbur/captain/badge.svg?branch=master)](https://coveralls.io/github/harbur/captain?branch=master)
 
+This repository was originally forked from harbur/captain before it was
+deleted. If you use captain and want fixes, let us know.
+
 # To Build Project
 
 ## One Time Setup
